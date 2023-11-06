@@ -9,4 +9,19 @@ public abstract class CycleElectrique extends Cycle implements Rechargeable{
         this.autonomieKm = autonomieKm;
         this.percentBatteryLevel = percentBatteryLevel;
     }
+
+    public void charger(){
+        this.percentBatteryLevel += 20;
+    }
+    public int getAutonomieKm(){
+        return this.autonomieKm;
+    }
+
+    @Override
+    public String toString() {
+        return "CycleElectrique{" +
+                "autonomieKm=" + autonomieKm +
+                ", percentBatteryLevel=" + percentBatteryLevel +
+                '}';
+    }
 }
